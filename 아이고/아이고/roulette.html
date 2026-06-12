@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>룰렛 이벤트 — 이음 시장</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dancheong-bg--light">
+  <div class="dancheong-watermark" aria-hidden="true"></div>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo" data-transition>이음</a>
+    <div class="nav__links">
+      <a href="index.html" data-transition>홈</a>
+      <a href="market.html" data-transition>시장 소개</a>
+      <a href="company.html" data-transition>이음뜰</a>
+    </div>
+  </nav>
+
+  <main class="roulette-page">
+    <h1>🎡 이음 시장 룰렛</h1>
+    <p class="roulette-page__sub">행운을 시험해보세요!</p>
+
+    <div class="roulette-container">
+      <div class="roulette-pointer" aria-hidden="true"></div>
+      <div class="roulette-wheel" id="rouletteWheel" role="img" aria-label="룰렛"></div>
+      <div class="roulette-center" aria-hidden="true">福</div>
+    </div>
+
+    <button class="btn-dancheong" id="spinBtn">돌리기</button>
+    <p class="roulette-note">당첨 확률 40% · 1인 1일 3회 · 당첨 시 안내 데스크에서 수령</p>
+  </main>
+
+  <dialog class="result-modal" id="resultModal">
+    <div class="result-modal__inner">
+      <div class="result-modal__icon" id="resultIcon">🎉</div>
+      <h2 class="result-modal__title" id="resultTitle"></h2>
+      <p class="result-modal__message" id="resultMessage"></p>
+      <button class="btn-dancheong" id="closeResult">확인</button>
+    </div>
+  </dialog>
+
+  <div class="dancheong-band"></div>
+
+  <footer class="footer">
+    <p>&copy; 2026 이음 시장 · 룰렛 이벤트</p>
+  </footer>
+
+  <script src="js/roulette.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
