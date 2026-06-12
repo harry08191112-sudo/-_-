@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이음 시장 — 상점 탐방</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dancheong-watermark" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo" data-transition>이음</a>
+    <div class="nav__links">
+      <a href="index.html" data-transition>홈</a>
+      <a href="company.html" data-transition>이음뜰</a>
+      <a href="roulette.html" data-transition>룰렛 이벤트</a>
+    </div>
+  </nav>
+
+  <header class="market-header fade-in">
+    <div class="market-header__arch">
+      <h1>이<span>음</span> 시장</h1>
+    </div>
+    <p class="market-header__tagline">가게를 클릭하면 메뉴를 만날 수 있어요</p>
+  </header>
+
+  <main>
+    <div class="shop-grid">
+      <button class="shop-card shop-card--green fade-in" data-shop="vegetable">
+        <div class="shop-card__visual">🥬</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">채소 · 청과</span>
+          <h2 class="shop-card__title">영이네 채소가게</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+
+      <button class="shop-card shop-card--red fade-in" data-shop="bunsik">
+        <div class="shop-card__visual">🍢</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">분식 · 스트릿</span>
+          <h2 class="shop-card__title">뽀까뽀까 가연분식</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+
+      <button class="shop-card shop-card--yellow fade-in" data-shop="fruit">
+        <div class="shop-card__visual">🍊</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">과일 · 청과</span>
+          <h2 class="shop-card__title">싱싱 유정네 과일</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+
+      <button class="shop-card shop-card--navy fade-in" data-shop="takoyaki">
+        <div class="shop-card__visual">🐙</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">일식 · 스트릿</span>
+          <h2 class="shop-card__title">타코야키 onmymic</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+
+      <button class="shop-card shop-card--brown fade-in" data-shop="bungeoppang">
+        <div class="shop-card__visual">🐟</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">간식 · 전통</span>
+          <h2 class="shop-card__title">경은이네 붕빵붕빵</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+
+      <button class="shop-card shop-card--purple fade-in" data-shop="dalgona">
+        <div class="shop-card__visual">🍬</div>
+        <div class="shop-card__body">
+          <span class="shop-card__category">디저트 · 수제</span>
+          <h2 class="shop-card__title">달달 수제 달고나</h2>
+          <span class="shop-card__hint">메뉴 보기 →</span>
+        </div>
+      </button>
+    </div>
+
+    <section class="roulette-banner fade-in">
+      <div class="roulette-banner__inner">
+        <h2>🎡 이음 시장 룰렛 이벤트</h2>
+        <p>룰렛을 돌리고 할인 쿠폰·간식 혜택에 도전하세요!</p>
+        <a href="roulette.html" class="btn-dancheong" data-transition>룰렛 돌리러 가기</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="menu-modal" id="menuModal">
+    <div class="menu-modal__inner">
+      <button class="menu-modal__close" id="closeModal" aria-label="닫기">&times;</button>
+      <div class="menu-modal__header">
+        <span class="menu-modal__category" id="modalCategory"></span>
+        <h2 class="menu-modal__title" id="modalTitle"></h2>
+        <p class="menu-modal__desc" id="modalDesc"></p>
+      </div>
+      <ul class="menu-modal__list" id="modalMenu"></ul>
+      <div class="menu-modal__footer">
+        <span class="menu-modal__hours" id="modalHours"></span>
+        <span class="menu-modal__location">이음 시장 B동 1층</span>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <p>&copy; 2026 이음 시장 · 서울 ○○구 ○○로 12</p>
+    <p class="footer__sub">매일 09:00 – 21:00 · 매주 토요일 야시장</p>
+  </footer>
+
+  <script src="js/shops.js"></script>
+  <script src="js/market.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
